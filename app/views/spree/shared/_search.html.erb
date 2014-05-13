@@ -21,23 +21,3 @@
   </span>
 </div>
 <% end %>
-
-<form class="navbar-form" role="search" style="padding: 0px">
-  <div class="input-group">
-
-    <span class="input-group-btn">
-      <select name="cid" class="form-control" style="width: 145px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-right: 0px">
-        <option value="">全ての商品から</option>
-        <option value="<{$category[num].id}>"><{$category[num].name}></option>
-      </select>
-    </span>
-
-    <input name="keyword" type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-
-    <span class="input-group-btn">
-      <button class="btn btn-primary" type="submit" style="height: 34px"><i class="glyphicon glyphicon-search"></i></button>
-    </span>
-
-  </div>
-</form>
-
