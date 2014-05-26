@@ -9,11 +9,11 @@ Spree::BaseHelper.module_eval do
       text = "<span class='glyphicon glyphicon-shopping-cart'></span> #{text}: (#{Spree.t('empty')})".html_safe
       css_class = 'empty'
     else
-      text = "<span class='glyphicon glyphicon-shopping-cart'></span> #{text}: (#{current_order.item_count})  <span class='amount'>#{current_order.display_total.to_html}</span>".html_safe
-      css_class = 'full'
+      text = "<span class='glyphicon glyphicon-shopping-cart'></span> #{text}: (#{current_order.item_count}) <span class='amount'>#{current_order.display_total.to_html}</span>".html_safe
+      css_class = 'full btn btn-japonesque btn-navbar pull-right'
     end
 
-    link_to text, spree.cart_path, :class => "cart-info #{css_class}"
+    link_to text, spree.cart_path, :class => "cart-info #{css_class}", style: "margin: 8px 0px"
   end
 
   def flash_messages(opts = {})
