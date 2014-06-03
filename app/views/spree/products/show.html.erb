@@ -32,11 +32,14 @@
       <div data-hook="product_right_part_wrap">
 
         <div id="product-description" data-hook="product_description">
-
-          <h1 class="product-title" itemprop="name"><%= accurate_title %></h1>
-
-          <div class="well" itemprop="description" data-hook="description">
-            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          
+          <div class="panel panel-default">
+            <div class="panel-heading" itemprop="name"><%= accurate_title %></div>
+            <div class="panel-body" itemprop="description" data-hook="description">
+              <p class="mb-0">
+                <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+              </p>
+            </div>
           </div>
 
           <div id="cart-form" data-hook="cart_form">
